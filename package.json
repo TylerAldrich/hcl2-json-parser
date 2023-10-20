@@ -1,5 +1,5 @@
 {
-  "name": "hcl2parser",
+  "name": "hcl2-json-parser",
   "version": "1.0.0",
   "description": "HCL v2 parser for JavaScript",
   "main": "dist/index.js",

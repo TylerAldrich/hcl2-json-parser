@@ -13,7 +13,10 @@ TypeScript definitions are included
 The module exports the following functions:
 
 ```ts
+// Returns the parsed JSON String, or rejects with the error.
 function parseToString(input: string): Promise<string>
+// Returns the parsed JSON string converted to an object with JSON.parse(),
+// or rejects with the error.
 function parseToObject(input: string): Promise<AnyJson>
 ```
 
