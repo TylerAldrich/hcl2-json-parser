@@ -1,21 +1,20 @@
-FROM golang:1.12.6-stretch
+FROM golang:1.18
 
 # Setup
 WORKDIR /build
 COPY go.* ./
 COPY *.go ./
 
-# Install older version of GopherJS
-RUN go get github.com/gopherjs/gopherjs@1.12.3+go1.12
+# Install GopherJS
+RUN go install github.com/gopherjs/gopherjs@v1.18.0-beta3
 
-# Special sauce part 1
+# Set up proper GOPATH
 RUN go mod vendor
-
-# Special sauce part 2 - copy to GOPATH
 RUN mkdir -p /go/src/hcl2-parser
 RUN cp -r * /go/src/hcl2-parser
 WORKDIR /go/src/hcl2-parser
 
+#GOPHERJS_GOROOT="$(go1.21.3 env GOROOT)"
 # Finally we can build
 RUN gopherjs build parser.go -o index.js -m
 
