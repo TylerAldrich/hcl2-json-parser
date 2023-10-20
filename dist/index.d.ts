@@ -1,4 +1,4 @@
-declare module "hcl2-parser"
+declare module "hcl2-json-parser"
 
 type AnyJson = boolean | number | string | null | JsonArray | JsonMap;
 interface JsonMap {  [key: string]: AnyJson; }

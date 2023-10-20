@@ -1,4 +1,4 @@
-module github.com/benc-uk/hcl2-parser
+module github.com/tyleraldrich/hcl2-parser
 
 go 1.11
 

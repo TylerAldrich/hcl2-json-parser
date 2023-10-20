@@ -25,23 +25,23 @@ function parseToObject(input: string): Promise<AnyJson>
 Install as normal with NPM
 
 ```bash
-npm install hcl2-parser
+npm install hcl2-json-parser
 ```
 
 Importing into your project
 
 ```ts
 // Good old fashioned Node.js CommonJS require
-const hcl = require("hcl2-parser")
+const hcl = require("hcl2-json-parser")
 
 // Import with ES6 or TypeScript
-import * as hcl = from "hcl2-parser"
+import * as hcl = from "hcl2-json-parser"
 ```
 
 Simple example of usage
 
 ```js
-const hcl = require("hcl2-parser")
+const hcl = require("hcl2-json-parser")
 
 const hclString = `
 # Create a resource group
